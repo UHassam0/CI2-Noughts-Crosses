@@ -1,0 +1,13 @@
+h1 {
+    text-align: center;
+    color: gold;
+}
+
+body {
+    background-color: teal;
+    color: gold;
+}
+
+.grid-boxes {
+    column-count: 3;
+}
