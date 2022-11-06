@@ -8,6 +8,18 @@ body {
     color: gold;
 }
 
+.game-grid {
+    margin: auto;
+    display: grid;
+    grid-template-columns: 300px 300px 300px;
+    grid-template-rows: 300px 300px 300px;
+    height: 75%;
+    width: 75%;      
+    gap: 30px;
+}
+
 .grid-boxes {
-    column-count: 3;
+    line-height: 300px;
+    text-align: center;
+    background-color: turquoise;
 }
