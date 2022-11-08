@@ -1,5 +1,17 @@
 //document.onload = alert('Are you ready to play?');
+let nought = document.getElementById('nought');
+let cross = document.getElementById('cross');
 
+nought.addEventListener('click', playAsNought);
+
+function playAsNought(event) {
+    let grid = document.getElementsByClassName('grid-boxes');
+    switch(grid[1].innerhtml) {
+    case  'O':
+    alert('You Win!');
+    
+    }
+}
 
 let box1 = document.getElementById('1');
 let box2 = document.getElementById('2');
@@ -11,8 +23,8 @@ let box7 = document.getElementById('7');
 let box8 = document.getElementById('8');
 let box9 = document.getElementById('9');
 
-let grid = document.getElementsByClassName('grid-boxes');
-//let boxNumber = grid[i]
+
+
 
 function insertNought(event) {
     let box1 = document.getElementById('1');

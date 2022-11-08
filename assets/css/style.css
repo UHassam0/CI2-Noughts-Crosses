@@ -10,16 +10,20 @@ body {
 }
 
 .game-center {
+    /*background-color: aliceblue;*/
     margin: auto;
-    height: 75%;
-    width: 75%;    
+    height: 640px;
+    width: 640px;    
 }
 
 .game-grid {
+    /*background-color: antiquewhite;*/
+    display: inline-block;
     display: grid;
     grid-template-columns: 200px 200px 200px;
     grid-template-rows: 200px 200px 200px; 
     gap: 20px;
+
     margin: auto;
 }
 
@@ -29,14 +33,28 @@ body {
     font-size: 180px;
     font-weight: 600;
     background-color: turquoise;
+
 }
 
 .left {
-    /*display: inline-block;*/
+    /*display: inline-block;    
+    background-color: aquamarine;*/
     float: left;
+
 }
 
 .right {
-    /*display: inline-block;*/
+    /*display: inline-block;
+    background-color: azure; */   
     float: right;
+
+}
+
+button {
+    height: 20%;
+    width: 20%;
+    color: teal;
+    font-size: 90%;
+    font-weight: bold;
+    background-color: gold;
 }
