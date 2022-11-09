@@ -44,20 +44,20 @@ function caseWin9() {
     }
 }
 
-console.log(caseWin1());
-console.log(caseWin5());
-console.log(caseWin9());
 
 function playerTurn() {   
     for (let i of empty) {
-    i.addEventListener('click', insertToken)
+    i.addEventListener('click', insertToken);
     function insertToken(event) {
-        this.innerHTML = 'X'
+        this.innerHTML = playerToken;
         }
+        compTurn();
     }
+
 }
 
 let compToken = 'O';
+let playerToken = 'X';
 
 function compTurn() {
     let compChoice = Math.floor(Math.random() * empty.length);
@@ -65,4 +65,4 @@ function compTurn() {
 }
 
 playerTurn();
-compTurn();
+
