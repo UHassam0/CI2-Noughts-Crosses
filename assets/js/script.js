@@ -8,7 +8,7 @@ let box7 = document.getElementById('7').innerHTML;
 let box8 = document.getElementById('8').innerHTML;
 let box9 = document.getElementById('9').innerHTML;
 
-
+let empty = document.querySelectorAll('.grid-boxes:empty');
 
 function caseWin1() {
     if (
@@ -31,7 +31,7 @@ function caseWin5() {
     }
 }
 
-function caseWin1() {
+function caseWin9() {
     if (
         box9 === box8 && box9 === box7
         ||
@@ -42,3 +42,16 @@ function caseWin1() {
 }
 
 console.log(caseWin1());
+console.log(caseWin5());
+console.log(caseWin9());
+
+function playerClick() {   
+    for (let i of empty) {
+    i.addEventListener('click', insertToken)
+    function insertToken(event) {
+        this.innerHTML = 'X'
+        }
+    }
+}
+
+
