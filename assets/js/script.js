@@ -1,3 +1,6 @@
+
+
+
 let box1 = document.getElementById('1').innerHTML;
 let box2 = document.getElementById('2').innerHTML;
 let box3 = document.getElementById('3').innerHTML;
@@ -45,7 +48,7 @@ console.log(caseWin1());
 console.log(caseWin5());
 console.log(caseWin9());
 
-function playerClick() {   
+function playerTurn() {   
     for (let i of empty) {
     i.addEventListener('click', insertToken)
     function insertToken(event) {
@@ -54,4 +57,12 @@ function playerClick() {
     }
 }
 
+let compToken = 'O';
 
+function compTurn() {
+    let compChoice = Math.floor(Math.random() * empty.length);
+    empty[compChoice].innerHTML = compToken;
+}
+
+playerTurn();
+compTurn();
