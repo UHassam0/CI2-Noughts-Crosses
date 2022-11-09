@@ -58,3 +58,7 @@ button {
     font-weight: bold;
     background-color: gold;
 }
+
+.game-selections {
+    display: none;
+}
