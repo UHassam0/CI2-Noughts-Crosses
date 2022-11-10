@@ -1,6 +1,5 @@
 
 
-
 let box1 = document.getElementById('1').innerHTML;
 let box2 = document.getElementById('2').innerHTML;
 let box3 = document.getElementById('3').innerHTML;
@@ -11,7 +10,7 @@ let box7 = document.getElementById('7').innerHTML;
 let box8 = document.getElementById('8').innerHTML;
 let box9 = document.getElementById('9').innerHTML;
 
-let empty = document.querySelectorAll('.grid-boxes:empty')
+let empty = document.querySelectorAll('.grid-boxes:empty');
 
 function caseWin1() {
     if (
@@ -35,30 +34,11 @@ function caseWin9() {
         box9 === box8 && box9 === box7
         ||
         box9 === box6 && box9 === box3
-    );
-}
-
-
-function playerTurn() {   
-    for (let i of empty) {
-        let empty = document.querySelectorAll('.grid-boxes:empty');
-        i.addEventListener('click', insertToken);
-            function insertToken(event) {
-            this.innerHTML = playerToken;
-        }
-    }
-}
-
-let compToken = 'O';
-let playerToken = 'X';
-
-function compTurn() {
-    let compChoice = Math.floor(Math.random() * empty.length);
-    empty[compChoice].innerHTML = compToken;
+    ); 
 }
 
 function checkPlayerWin() {
-    playerTurn();
+
     if (caseWin1()) {
         alert(`${box1} is the winner`);
      }
@@ -71,12 +51,28 @@ function checkPlayerWin() {
      else compTurn();
 }
 
-function game() {
-do {
-    checkPlayerWin();
-} while (empty.length > 0);
-if (empty.length === 0) {
-    alert('Game over! Stalemate!')
+
+function playerTurn() {   
+    for (let i of empty) {
+    i.addEventListener('click', insertToken);
+    function insertToken(event) {
+        this.innerHTML = playerToken;
+        checkPlayerWin();
+        let empty = document.querySelectorAll('.grid-boxes:empty');
+        }
+
+
     }
+
 }
-game();
+
+let compToken = 'O';
+let playerToken = 'X';
+
+function compTurn() {
+    let compChoice = Math.floor(Math.random() * empty.length);
+    empty[compChoice].innerHTML = compToken;
+}
+
+
+playerTurn();
