@@ -1,56 +1,74 @@
 
 
-let box1 = document.getElementById('1').innerHTML;
-let box2 = document.getElementById('2').innerHTML;
-let box3 = document.getElementById('3').innerHTML;
-let box4 = document.getElementById('4').innerHTML;
-let box5 = document.getElementById('5').innerHTML;
-let box6 = document.getElementById('6').innerHTML;
-let box7 = document.getElementById('7').innerHTML;
-let box8 = document.getElementById('8').innerHTML;
-let box9 = document.getElementById('9').innerHTML;
+let box1 = document.getElementById('1');
+let box2 = document.getElementById('2');
+let box3 = document.getElementById('3');
+let box4 = document.getElementById('4');
+let box5 = document.getElementById('5');
+let box6 = document.getElementById('6');
+let box7 = document.getElementById('7');
+let box8 = document.getElementById('8');
+let box9 = document.getElementById('9');
 
-box1.addEventListener('click', handleClick)
+box1.addEventListener('click', handleClick);
+box2.addEventListener('click', handleClick);
+box3.addEventListener('click', handleClick);
+box4.addEventListener('click', handleClick);
+box5.addEventListener('click', handleClick);
+box6.addEventListener('click', handleClick);
+box7.addEventListener('click', handleClick);
+box8.addEventListener('click', handleClick);
+box9.addEventListener('click', handleClick);
+
+function handleClick(event) {
+    if (event.target.innerHTML == '') {
+    event.target.innerHTML = playerToken;
+    empty = document.querySelectorAll('.grid-boxes:empty');
+    }
+    empty = document.querySelectorAll('.grid-boxes:empty');
+    checkPlayerWin();
+    compTurn();
+    if (empty.length === 0) {
+        alert('Game Over! Stalemate! Refresh the page to try again');
+    }
+}
+
 
 let empty = document.querySelectorAll('.grid-boxes:empty');
 
 function caseWin1() {
     if (
-        box1 === box2 && box1 === box3
+        box1.innerHTML === box2.innerHTML && box1.innerHTML === box3.innerHTML
         ||
-        box1 === box5 && box1 === box9
+        box1.innerHTML === box5.innerHTML && box1.innerHTML === box9.innerHTML
         ||
-        box1 === box4 && box1 === box7
-    ); 
+        box1.innerHTML === box4.innerHTML && box1.innerHTML === box7.innerHTML
+    ) alert(`${box9.innerHTML} is the winner. Refresh the page`); 
 }
 function caseWin5() {
     if (
-        box5 === box3 && box5 === box7
+        box5.innerHTML === box3.innerHTML && box5.innerHTML === box7.innerHTML
         ||
-        box5 === box4 && box1 === box6
-    );
+        box5.innerHTML === box4.innerHTML && box1.innerHTML === box6.innerHTML
+    ) alert(`${box5.innerHTML} is the winner. Refresh the page`);
 }
 
 function caseWin9() {
     if (
-        box9 === box8 && box9 === box7
+        box9.innerHTML === box8.innerHTML && box9.innerHTML === box7.innerHTML
         ||
-        box9 === box6 && box9 === box3
-    ); 
+        box9.innerHTML === box6.innerHTML && box9.innerHTML === box3.innerHTML
+    ) alert(`${box1.innerHTML} is the winner. Refresh the page`); 
 }
 
 function checkPlayerWin() {
 
-    if (caseWin1()) {
-        alert(`${box1} is the winner`);
+    if (empty.length < 5) {
+       
+        caseWin1()
+        caseWin5()
+        caseWin9() 
      }
-    else if (caseWin5()) {
-        alert(`${box5} is the winner`);
-     }
-     else if (caseWin9()) {
-        alert(`${box1} is the winner`);
-     }
-     else compTurn();
 }
 
 
@@ -81,4 +99,4 @@ function compTurn() {
 }
 
 
-playerTurn();
+
