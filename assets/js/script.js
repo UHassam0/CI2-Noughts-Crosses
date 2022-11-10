@@ -10,6 +10,8 @@ let box7 = document.getElementById('7').innerHTML;
 let box8 = document.getElementById('8').innerHTML;
 let box9 = document.getElementById('9').innerHTML;
 
+box1.addEventListener('click', handleClick)
+
 let empty = document.querySelectorAll('.grid-boxes:empty');
 
 function caseWin1() {
@@ -19,7 +21,7 @@ function caseWin1() {
         box1 === box5 && box1 === box9
         ||
         box1 === box4 && box1 === box7
-    );
+    ); 
 }
 function caseWin5() {
     if (
@@ -52,18 +54,20 @@ function checkPlayerWin() {
 }
 
 
-function playerTurn() {   
+function playerTurn() {  
+    empty = document.querySelectorAll('.grid-boxes:empty'); 
     for (let i of empty) {
+        if (empty.length > 0) {
     i.addEventListener('click', insertToken);
     function insertToken(event) {
         this.innerHTML = playerToken;
+        this.className = 'doNotUse'
         checkPlayerWin();
-        let empty = document.querySelectorAll('.grid-boxes:empty');
-        }
-
-
+        empty = document.querySelectorAll('.grid-boxes:empty');
+        }}
+        empty = document.querySelectorAll('.grid-boxes:empty');
+    
     }
-
 }
 
 let compToken = 'O';
@@ -71,7 +75,9 @@ let playerToken = 'X';
 
 function compTurn() {
     let compChoice = Math.floor(Math.random() * empty.length);
+    if (empty.length > 0) {
     empty[compChoice].innerHTML = compToken;
+    }
 }
 
 

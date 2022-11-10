@@ -10,14 +10,12 @@ body {
 }
 
 .game-center {
-    /*background-color: aliceblue;*/
     margin: auto;
     height: 640px;
     width: 640px;    
 }
 
 .game-grid {
-    /*background-color: antiquewhite;*/
     display: inline-block;
     display: grid;
     grid-template-columns: 200px 200px 200px;
@@ -36,30 +34,103 @@ body {
 
 }
 
+.doNotUse {
+    line-height: 200px;
+    text-align: center;
+    font-size: 180px;
+    font-weight: 600;
+    background-color: turquoise;
+
+}
+
 .left {
-    /*display: inline-block;    
-    background-color: aquamarine;*/
     float: left;
 
 }
 
 .right {
-    /*display: inline-block;
-    background-color: azure; */   
     float: right;
 
 }
 
 #submit {
-    /*height: 20%;
-    width: 20%;*/
     color: teal;
     font-size: 90%;
     font-weight: bold;
     background-color: gold;
 }
-/*
-.game-selections {
-    display: none;
+
+@media screen and (max-width: 680px) {
+    .game-center {
+        margin: auto;
+        height: 600px;
+        width: 95%;    
+    }
+    
+    .game-grid {
+        display: inline-block;
+        display: grid;
+        grid-template-columns: 150px 150px 150px;
+        grid-template-rows: 150px 150px 150px; 
+        gap: 10px;
+    
+        margin: auto;
+    }
+    
+    .grid-boxes {
+        line-height: 150px;
+        text-align: center;
+        font-size: 130px;
+        font-weight: 600;
+        background-color: turquoise;
+    
+    }
+    
+    .doNotUse {
+        line-height: 150px;
+        text-align: center;
+        font-size: 130px;
+        font-weight: 600;
+        background-color: turquoise;
+    
+    }
 }
-*/
+
+@media screen and (max-width: 500px) {
+    .game-center {
+        margin: auto;
+        height: 450px;
+        width: 95%;    
+    }
+    
+    .game-grid {
+        display: inline-block;
+        display: grid;
+        grid-template-columns: 100px 100px 100px;
+        grid-template-rows: 100px 100px 100px; 
+        gap: 5px;
+    
+        margin: auto;
+    }
+    
+    .grid-boxes {
+        line-height: 100px;
+        text-align: center;
+        font-size: 90px;
+        font-weight: 400;
+        background-color: turquoise;
+    
+    }
+    
+    .doNotUse {
+        line-height: 100px;
+        text-align: center;
+        font-size: 90px;
+        font-weight: 400;
+        background-color: turquoise;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+}
