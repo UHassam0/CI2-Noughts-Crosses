@@ -50,15 +50,16 @@ body {
 
 }
 
-button {
-    height: 20%;
-    width: 20%;
+#submit {
+    /*height: 20%;
+    width: 20%;*/
     color: teal;
     font-size: 90%;
     font-weight: bold;
     background-color: gold;
 }
-
+/*
 .game-selections {
     display: none;
 }
+*/

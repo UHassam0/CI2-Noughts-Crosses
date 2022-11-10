@@ -11,7 +11,7 @@ let box7 = document.getElementById('7').innerHTML;
 let box8 = document.getElementById('8').innerHTML;
 let box9 = document.getElementById('9').innerHTML;
 
-let empty = document.querySelectorAll('.grid-boxes:empty');
+let empty = document.querySelectorAll('.grid-boxes:empty')
 
 function caseWin1() {
     if (
@@ -20,18 +20,14 @@ function caseWin1() {
         box1 === box5 && box1 === box9
         ||
         box1 === box4 && box1 === box7
-    ) {
-       return `${box1} is the winner`;
-    }
+    );
 }
 function caseWin5() {
     if (
         box5 === box3 && box5 === box7
         ||
         box5 === box4 && box1 === box6
-    ) {
-       return `${box5} is the winner`;
-    }
+    );
 }
 
 function caseWin9() {
@@ -39,21 +35,18 @@ function caseWin9() {
         box9 === box8 && box9 === box7
         ||
         box9 === box6 && box9 === box3
-    ) {
-       return `${box9} is the winner`;
-    }
+    );
 }
 
 
 function playerTurn() {   
     for (let i of empty) {
-    i.addEventListener('click', insertToken);
-    function insertToken(event) {
-        this.innerHTML = playerToken;
+        let empty = document.querySelectorAll('.grid-boxes:empty');
+        i.addEventListener('click', insertToken);
+            function insertToken(event) {
+            this.innerHTML = playerToken;
         }
-        compTurn();
     }
-
 }
 
 let compToken = 'O';
@@ -64,5 +57,26 @@ function compTurn() {
     empty[compChoice].innerHTML = compToken;
 }
 
-playerTurn();
+function checkPlayerWin() {
+    playerTurn();
+    if (caseWin1()) {
+        alert(`${box1} is the winner`);
+     }
+    else if (caseWin5()) {
+        alert(`${box5} is the winner`);
+     }
+     else if (caseWin9()) {
+        alert(`${box1} is the winner`);
+     }
+     else compTurn();
+}
 
+function game() {
+do {
+    checkPlayerWin();
+} while (empty.length > 0);
+if (empty.length === 0) {
+    alert('Game over! Stalemate!')
+    }
+}
+game();
