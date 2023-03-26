@@ -4,6 +4,14 @@ h1 {
     font-size: 50px;
 }
 
+#modal::backdrop {
+    filter: blur(10px);
+}
+
+#modal {
+    background-color: aqua;
+}
+
 body {
     background-color: teal;
     color: gold;
@@ -59,6 +67,8 @@ body {
     font-weight: bold;
     background-color: gold;
 }
+
+
 
 @media screen and (max-width: 680px) {
     .game-center {

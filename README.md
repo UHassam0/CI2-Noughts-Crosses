@@ -9,8 +9,23 @@ A noughts and crosses game
 ## Testing and validation
 
 
-html validator said remove frameboarder attribute from iframes as it's obsolete. Then second check no errors
+clicking already filled box runs functions and adds aditional computer token
 
-css validator found missing comma 
+checks for winner adn can call winner for blank spaces
+calls winner before inputting token
+
+relies on user to reset board
+
+says game over - stalemate when board full even if shows a winner
+
+I've had to define empty too many times
+
+doesn't really seem to work overall
+
+not centre aligned on media queries?
+
+html validator 
+
+css validator 
 
  lighthouse results: 

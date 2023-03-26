@@ -1,5 +1,5 @@
 
-
+// Assign game grid boxes to variables
 let box1 = document.getElementById('1');
 let box2 = document.getElementById('2');
 let box3 = document.getElementById('3');
@@ -10,6 +10,7 @@ let box7 = document.getElementById('7');
 let box8 = document.getElementById('8');
 let box9 = document.getElementById('9');
 
+// Add event listeners to game grid boxes
 box1.addEventListener('click', handleClick);
 box2.addEventListener('click', handleClick);
 box3.addEventListener('click', handleClick);
@@ -21,6 +22,7 @@ box8.addEventListener('click', handleClick);
 box9.addEventListener('click', handleClick);
 
 function handleClick(event) {
+    // inputs playerToken if clicked box is not empty
     if (event.target.innerHTML == '') {
     event.target.innerHTML = playerToken;
     empty = document.querySelectorAll('.grid-boxes:empty');
@@ -62,8 +64,8 @@ function caseWin9() {
 }
 
 function checkPlayerWin() {
-
-    if (empty.length < 5) {
+//checks for each win case
+    if (empty.length < 5) { // trying to prevent return of blank winner
        
         caseWin1()
         caseWin5()
@@ -72,7 +74,7 @@ function checkPlayerWin() {
 }
 
 
-function playerTurn() {  
+function playerTurn() {  // not used?
     empty = document.querySelectorAll('.grid-boxes:empty'); 
     for (let i of empty) {
         if (empty.length > 0) {
@@ -92,9 +94,9 @@ let compToken = 'O';
 let playerToken = 'X';
 
 function compTurn() {
-    let compChoice = Math.floor(Math.random() * empty.length);
+    let compChoice = Math.floor(Math.random() * empty.length); // generate random number less than or equal to number of empty boxes
     if (empty.length > 0) {
-    empty[compChoice].innerHTML = compToken;
+    empty[compChoice].innerHTML = compToken; // input compToken to random choice as long as at least 1 empty box
     }
 }
 
