@@ -31,7 +31,7 @@ function handleClick(event) {
     checkPlayerWin();
     compTurn();
     if (empty.length === 0) {
-        alert('Game Over! Stalemate! Refresh the page to try again');
+        alert('Game Over! Stalemate! Refresh the page to try again!');
     }
 }
 
