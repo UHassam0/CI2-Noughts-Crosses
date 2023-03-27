@@ -15,6 +15,7 @@ h1 {
 body {
     background-color: teal;
     color: gold;
+    font-family: Alkatra;
 }
 
 .game-center {
@@ -29,7 +30,7 @@ body {
     grid-template-columns: 200px 200px 200px;
     grid-template-rows: 200px 200px 200px; 
     gap: 20px;
-
+    pointer-events: all; 
     margin: auto;
 }
 

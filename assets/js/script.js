@@ -1,4 +1,3 @@
-
 // Assign game grid boxes to variables
 let box1 = document.getElementById('1');
 let box2 = document.getElementById('2');
@@ -24,8 +23,8 @@ box9.addEventListener('click', handleClick);
 function handleClick(event) {
     // inputs playerToken if clicked box is not empty
     if (event.target.innerHTML == '') {
-    event.target.innerHTML = playerToken;
-    empty = document.querySelectorAll('.grid-boxes:empty');
+        event.target.innerHTML = playerToken;
+        empty = document.querySelectorAll('.grid-boxes:empty');
     }
     empty = document.querySelectorAll('.grid-boxes:empty');
     checkPlayerWin();
@@ -40,53 +39,52 @@ let empty = document.querySelectorAll('.grid-boxes:empty');
 
 function caseWin1() {
     if (
-        box1.innerHTML === box2.innerHTML && box1.innerHTML === box3.innerHTML
-        ||
-        box1.innerHTML === box5.innerHTML && box1.innerHTML === box9.innerHTML
-        ||
+        box1.innerHTML === box2.innerHTML && box1.innerHTML === box3.innerHTML ||
+        box1.innerHTML === box5.innerHTML && box1.innerHTML === box9.innerHTML ||
         box1.innerHTML === box4.innerHTML && box1.innerHTML === box7.innerHTML
-    ) alert(`${box9.innerHTML} is the winner. Refresh the page`); 
+    ) alert(`${box9.innerHTML} is the winner. Refresh the page`);
 }
+
 function caseWin5() {
     if (
-        box5.innerHTML === box3.innerHTML && box5.innerHTML === box7.innerHTML
-        ||
+        box5.innerHTML === box3.innerHTML && box5.innerHTML === box7.innerHTML ||
         box5.innerHTML === box4.innerHTML && box1.innerHTML === box6.innerHTML
     ) alert(`${box5.innerHTML} is the winner. Refresh the page`);
 }
 
 function caseWin9() {
     if (
-        box9.innerHTML === box8.innerHTML && box9.innerHTML === box7.innerHTML
-        ||
+        box9.innerHTML === box8.innerHTML && box9.innerHTML === box7.innerHTML ||
         box9.innerHTML === box6.innerHTML && box9.innerHTML === box3.innerHTML
-    ) alert(`${box1.innerHTML} is the winner. Refresh the page`); 
+    ) alert(`${box1.innerHTML} is the winner. Refresh the page`);
 }
 
 function checkPlayerWin() {
-//checks for each win case
+    //checks for each win case
     if (empty.length < 5) { // trying to prevent return of blank winner
-       
+
         caseWin1()
         caseWin5()
-        caseWin9() 
-     }
+        caseWin9()
+    }
 }
 
 
-function playerTurn() {  // not used?
-    empty = document.querySelectorAll('.grid-boxes:empty'); 
+function playerTurn() { // not used?
+    empty = document.querySelectorAll('.grid-boxes:empty');
     for (let i of empty) {
         if (empty.length > 0) {
-    i.addEventListener('click', insertToken);
-    function insertToken(event) {
-        this.innerHTML = playerToken;
-        this.className = 'doNotUse'
-        checkPlayerWin();
+            i.addEventListener('click', insertToken);
+
+            function insertToken(event) {
+                this.innerHTML = playerToken;
+                this.className = 'doNotUse'
+                checkPlayerWin();
+                empty = document.querySelectorAll('.grid-boxes:empty');
+            }
+        }
         empty = document.querySelectorAll('.grid-boxes:empty');
-        }}
-        empty = document.querySelectorAll('.grid-boxes:empty');
-    
+
     }
 }
 
@@ -96,9 +94,6 @@ let playerToken = 'X';
 function compTurn() {
     let compChoice = Math.floor(Math.random() * empty.length); // generate random number less than or equal to number of empty boxes
     if (empty.length > 0) {
-    empty[compChoice].innerHTML = compToken; // input compToken to random choice as long as at least 1 empty box
+        empty[compChoice].innerHTML = compToken; // input compToken to random choice as long as at least 1 empty box
     }
 }
-
-
-
