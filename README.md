@@ -18,6 +18,8 @@ relies on user to reset board
 
 says game over - stalemate when board full even if shows a winner
 
+Incorrect win definitions
+
 I've had to define empty too many times
 
 doesn't really seem to work overall

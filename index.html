@@ -15,26 +15,31 @@
 <body>
     <header>
         <h1>Noughts & Crosses</h1>
+        <!-- Page heading -->
     </header>
 
-    <dialog class="game-selections" id="modal" open>
-        <form class="left" method="dialog" id="form">
-            <h4>Which do you choose?</h4>
-            <label>Noughts or Crosses?</label>
-            <input type="radio" value="X" name="token" required>X
-            <input type="radio" value="O" name="token">O
-            <input type="submit" id="submit">
-        </form>
 
-    </dialog>
 
     <div class="game-center">
+        <!-- Container div for game and divs -->
+
 
         <div class="game-title">
             <h2>You are Crosses!</h2>
         </div>
-
+        <dialog class="game-selections" id="modal" open>
+            <!-- Initial dialog box for info and selecting X or O - also take name and keep score? -->
+            <form class="left" method="dialog" id="form">
+                <h4>Which do you choose?</h4>
+                <label>Noughts or Crosses?</label>
+                <input type="radio" value="X" name="token" required>X
+                <input type="radio" value="O" name="token">O
+                <input type="submit" id="submit">
+            </form>
+    
+        </dialog>
         <div class="game-grid">
+            <!-- IDs for grid boxes going left to right each line and top to bottom from one line to the next -->
             <div class="grid-boxes" id="1"></div>
             <div class="grid-boxes" id="2"></div>
             <div class="grid-boxes" id="3"></div>
@@ -46,14 +51,7 @@
             <div class="grid-boxes" id="9"></div>
         </div>
 
-        <dialog class="game-selections" id="modal">
-            <form class="left" method="dialog" id="form">
-                <h4>Which do you choose?</h4>
-                <label>Noughts or Crosses?</label>
-                <input type="radio" value="X" name="token" required>
-                <input type="radio" value="O" name="token">
-                <input type="submit" id="submit">
-            </form>
+
 
 
     </div>
