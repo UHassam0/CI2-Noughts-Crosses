@@ -42,13 +42,13 @@ function caseWin1() {
         (box1.innerHTML === box2.innerHTML && box1.innerHTML === box3.innerHTML) ||
         (box1.innerHTML === box5.innerHTML && box1.innerHTML === box9.innerHTML) ||
         (box1.innerHTML === box4.innerHTML && box1.innerHTML === box7.innerHTML)
-    ) alert(`${box9.innerHTML} is the winner. Refresh the page`);
+    ) alert(`${box1.innerHTML} is the winner. Refresh the page`);
 }
 
 function caseWin5() {
     if (
         (box5.innerHTML === box3.innerHTML && box5.innerHTML === box7.innerHTML) ||
-        (box5.innerHTML === box4.innerHTML && box1.innerHTML === box6.innerHTML)
+        (box5.innerHTML === box4.innerHTML && box5.innerHTML === box6.innerHTML)
     ) alert(`${box5.innerHTML} is the winner. Refresh the page`);
 }
 
@@ -56,7 +56,7 @@ function caseWin9() {
     if (
         (box9.innerHTML === box8.innerHTML && box9.innerHTML === box7.innerHTML) ||
         (box9.innerHTML === box6.innerHTML && box9.innerHTML === box3.innerHTML)
-    ) alert(`${box1.innerHTML} is the winner. Refresh the page`);
+    ) alert(`${box9.innerHTML} is the winner. Refresh the page`);
 }
 
 function checkPlayerWin() {
