@@ -1,3 +1,7 @@
+
+let compToken = 'O';
+let playerToken = 'X';
+
 // Assign game grid boxes to variables
 let box1 = document.getElementById('1');
 let box2 = document.getElementById('2');
@@ -30,7 +34,7 @@ function handleClick(event) {
     checkPlayerWin();
     compTurn();
     if (empty.length === 0) {
-        alert('Game Over! Stalemate! Refresh the page to try again!');
+        document.getElementById('game-message').innerHTML = 'Game Over! Stalemate! Refresh the page to try again!';
     }
 }
 
@@ -42,21 +46,21 @@ function caseWin1() {
         (box1.innerHTML === box2.innerHTML && box1.innerHTML === box3.innerHTML) ||
         (box1.innerHTML === box5.innerHTML && box1.innerHTML === box9.innerHTML) ||
         (box1.innerHTML === box4.innerHTML && box1.innerHTML === box7.innerHTML)
-    ) alert(`${box1.innerHTML} is the winner. Refresh the page`);
+    ) document.getElementById('game-message').innerHTML = `${box1.innerHTML} is the winner. Refresh the page`;
 }
 
 function caseWin5() {
     if (
         (box5.innerHTML === box3.innerHTML && box5.innerHTML === box7.innerHTML) ||
         (box5.innerHTML === box4.innerHTML && box5.innerHTML === box6.innerHTML)
-    ) alert(`${box5.innerHTML} is the winner. Refresh the page`);
+    ) document.getElementById('game-message').innerHTML = `${box5.innerHTML} is the winner. Refresh the page`;
 }
 
 function caseWin9() {
     if (
         (box9.innerHTML === box8.innerHTML && box9.innerHTML === box7.innerHTML) ||
         (box9.innerHTML === box6.innerHTML && box9.innerHTML === box3.innerHTML)
-    ) alert(`${box9.innerHTML} is the winner. Refresh the page`);
+    ) document.getElementById('game-message').innerHTML = `${box9.innerHTML} is the winner. Refresh the page`;
 }
 
 function checkPlayerWin() {
@@ -88,8 +92,7 @@ function playerTurn() { // not used?
     }
 }
 
-let compToken = 'O';
-let playerToken = 'X';
+
 
 function compTurn() {
     let compChoice = Math.floor(Math.random() * empty.length); // generate random number less than or equal to number of empty boxes
