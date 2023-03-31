@@ -74,23 +74,6 @@ function checkPlayerWin() {
 }
 
 
-function playerTurn() { // not used?
-    empty = document.querySelectorAll('.grid-boxes:empty');
-    for (let i of empty) {
-        if (empty.length > 0) {
-            i.addEventListener('click', insertToken);
-
-            function insertToken(event) {
-                this.innerHTML = playerToken;
-                this.className = 'doNotUse'
-                checkPlayerWin();
-                empty = document.querySelectorAll('.grid-boxes:empty');
-            }
-        }
-        empty = document.querySelectorAll('.grid-boxes:empty');
-
-    }
-}
 
 
 
