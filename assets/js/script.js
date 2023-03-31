@@ -25,19 +25,6 @@ box7.addEventListener('click', handleClick);
 box8.addEventListener('click', handleClick);
 box9.addEventListener('click', handleClick);
 
-function handleClick(event) {
-    // inputs playerToken if clicked box is not empty
-    if (event.target.innerHTML == '') {
-        event.target.innerHTML = playerToken;
-        empty = document.querySelectorAll('.grid-boxes:empty');
-    }
-    empty = document.querySelectorAll('.grid-boxes:empty');
-    checkPlayerWin();
-    compTurn();
-    if (empty.length === 0) {
-        document.getElementById('game-message').innerHTML = 'Game Over! Stalemate! Refresh the page to try again!';
-    }
-}
 
 
 let empty = document.querySelectorAll('.grid-boxes:empty');
@@ -81,12 +68,25 @@ function checkPlayerWin() {
 }
 
 
-
-
-
 function compTurn() {
     let compChoice = Math.floor(Math.random() * empty.length); // generate random number less than or equal to number of empty boxes
     if (empty.length > 0) {
         empty[compChoice].innerHTML = compToken; // input compToken to random choice as long as at least 1 empty box
+    }
+}
+
+function handleClick(event) {
+    // inputs playerToken if clicked box is not empty
+    if (event.target.innerHTML != '') {
+        
+        }
+    else {
+        event.target.innerHTML = playerToken;
+        empty = document.querySelectorAll('.grid-boxes:empty');
+        checkPlayerWin();
+        compTurn();
+        if (empty.length === 0) {
+            document.getElementById('game-message').innerHTML = 'Game Over! Stalemate! Refresh the page to try again!';
+        }
     }
 }
