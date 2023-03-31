@@ -1,4 +1,5 @@
 
+// assign noughts and crosses tokens
 let compToken = 'O';
 let playerToken = 'X';
 

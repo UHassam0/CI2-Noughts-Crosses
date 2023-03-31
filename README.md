@@ -1,6 +1,6 @@
 # Noughts and Crosses
 
-This is a simplt noughts and crosses game wih
+This is a simple noughts and crosses game where the computer places its token randomly. Making it very easy
 
 ## Features
 
