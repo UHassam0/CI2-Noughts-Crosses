@@ -61,9 +61,9 @@ function checkPlayerWin() {
     //checks for each win case
     if (empty.length < 5) { // trying to prevent return of blank winner
 
-        caseWin1()
-        caseWin5()
-        caseWin9()
+        caseWin1();
+        caseWin5();
+        caseWin9();
     }
 }
 
@@ -88,5 +88,6 @@ function handleClick(event) {
         if (empty.length === 0) {
             document.getElementById('game-message').innerHTML = 'Game Over! Stalemate! Refresh the page to try again!';
         }
+        checkPlayerWin();
     }
 }

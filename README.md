@@ -10,13 +10,13 @@ A noughts and crosses game
 
 ### Bugs
 
-+ clicking already filled box runs functions and adds aditional computer token
+
 
 + allows cicking while form/modal is open
 
 + calls winner before inputting token
 
-
++ failed to call winner; seems to be that when O/computer is winner it only calls after next turn
 
 + says game over - stalemate when board full even if shows a winner
 
@@ -33,7 +33,9 @@ A noughts and crosses game
 
 + relies on user to reset board - created reload function - currently only called when game reaches stalemate - will adjust to be called with button. remove for now
 
-+ checks for winner adn can call winner for blank spaces - 
++ checks for winner and can call winner for blank spaces - corrected by adding clause to win checks to ensure the box is not empty and there is a win
+
++ clicking already filled box runs functions and adds aditional computer token - corrected by changing from checking the box is not empty to run functinos to making sure that if the box is not empty do nothing else do the rest of the functions
 
 ### Validators
 
