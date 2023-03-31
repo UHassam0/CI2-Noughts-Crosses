@@ -43,24 +43,30 @@ function handleClick(event) {
 let empty = document.querySelectorAll('.grid-boxes:empty');
 
 function caseWin1() {
-    if (
+    if ((box1.innerHTML != '') &&
+        (
         (box1.innerHTML === box2.innerHTML && box1.innerHTML === box3.innerHTML) ||
         (box1.innerHTML === box5.innerHTML && box1.innerHTML === box9.innerHTML) ||
         (box1.innerHTML === box4.innerHTML && box1.innerHTML === box7.innerHTML)
+        )
     ) document.getElementById('game-message').innerHTML = `${box1.innerHTML} is the winner. Refresh the page`;
 }
 
 function caseWin5() {
-    if (
+    if ((box5.innerHTML != '') &&
+    (
         (box5.innerHTML === box3.innerHTML && box5.innerHTML === box7.innerHTML) ||
         (box5.innerHTML === box4.innerHTML && box5.innerHTML === box6.innerHTML)
+    )
     ) document.getElementById('game-message').innerHTML = `${box5.innerHTML} is the winner. Refresh the page`;
 }
 
 function caseWin9() {
-    if (
+    if ((box9.innerHTML != '') &&
+    (
         (box9.innerHTML === box8.innerHTML && box9.innerHTML === box7.innerHTML) ||
         (box9.innerHTML === box6.innerHTML && box9.innerHTML === box3.innerHTML)
+    )
     ) document.getElementById('game-message').innerHTML = `${box9.innerHTML} is the winner. Refresh the page`;
 }
 
