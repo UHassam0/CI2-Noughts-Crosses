@@ -43,8 +43,10 @@ A noughts and crosses game. It has the option to select token, that is, whether 
 
 ### Validators
 
-html validator 
+![html validator](./assets/images/w3c%20html%20report.png)
 
-css validator 
+![css validator](./assets/images/jigsaw%20report.png)
 
- lighthouse results: 
+![lighthouse results](./assets/images/lighthouse%20report.png)
+
+![javascript validator](./assets/images/JSHint%20report.png)
