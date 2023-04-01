@@ -4,24 +4,22 @@ This is a simple noughts and crosses game where the computer places its token ra
 
 ## Features
 
-A noughts and crosses game
+A noughts and crosses game. It has the option to select token, that is, whether to play as noughts or crosses. I use javascript to run the game and check for wins
+
+![handrawn wireframe](./assets/images/noughts-crosses-wireframe.jpeg)
+![neater wireframe](./assets/images/Noughts%20and%20Crosses%20Wireframe.jpeg)
+![flowhcart for logic of game](./assets/images/Noughts%20and%20crosses%20flowchart.jpeg)
 
 ## Testing and validation
 
 ### Bugs
 
 
-
-
-
 + says game over - stalemate when board full even if shows a winner
 
 
-+ I've had to define empty too many times
++ I've had to define empty too many times - potential for global variable definiton but want to avoid the risks of that
 
-+ doesn't really seem to work overall
-
-+ not centre aligned on media queries? and font contrast
 
 ### Solved Bugs
 
@@ -38,6 +36,8 @@ A noughts and crosses game
 + calls winner before inputting token - solved by removing alerts
 
 + allows cicking while form/modal is open - change CSS to 'pointer-events: none' for gridboxes then use JS to change the pointer-evetns to all on each of the grid-boxes
+
++ not centre aligned on media queries? and font contrast
 
 
 ### Validators
