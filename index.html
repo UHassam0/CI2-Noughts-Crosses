@@ -30,10 +30,10 @@
         <dialog class="game-selections" id="modal" open>
             <!-- Initial dialog box for info and selecting X or O - also take name and keep score? -->
             <form class="left" method="dialog" id="tokenForm">
-                <h4>Which do you choose?</h4>
+                <h2>Which do you choose?</h2>
                 <label>Noughts or Crosses?</label>
-                <input type="radio" value="X" name="token" required>X
-                <input type="radio" value="O" name="token">O
+                <input type="radio" value="X" name="token" aria-label="X" required>X
+                <input type="radio" value="O" name="token" aria-label="O">O
                 <input type="submit" id="submitButton">
             </form>
 

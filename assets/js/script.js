@@ -99,8 +99,8 @@ function caseWin9() {
 
 function checkPlayerWin() {
     //checks for each win case
-    if (empty.length < 5) { // trying to prevent return of blank winner
-
+    if (empty.length < 5) { 
+// trying to prevent return of blank winner
         caseWin1();
         caseWin5();
         caseWin9();
@@ -109,19 +109,14 @@ function checkPlayerWin() {
 
 
 function compTurn() {
-    let compChoice = Math.floor(Math.random() * empty.length); // generate random number less than or equal to number of empty boxes
+    let compChoice = Math.floor(Math.random() * empty.length); 
+    // generate random number less than or equal to number of empty boxes
     if (empty.length > 0) {
-        empty[compChoice].innerHTML = compToken; // input compToken to random choice as long as at least 1 empty box
+        // input compToken to random choice as long as at least 1 empty box
+         empty[compChoice].innerHTML = compToken;
     }
 }
 
-function clearGrid() {
-    let gridBoxes = document.getElementsByClassName("grid-boxes");
-
-    for (let i = 0; i < 9; i++) {
-        gridBoxes[i].innerHTML = '';
-    }
-}
 
 function handleClick(event) {
     // inputs playerToken if clicked box is not empty
@@ -150,5 +145,5 @@ function resetBoard() {
     }
 }
 
-let newGame = document.getElementById('new-game')
-newGame.addEventListener('click', resetBoard)
+let newGame = document.getElementById('new-game');
+newGame.addEventListener('click', resetBoard);
