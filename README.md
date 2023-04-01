@@ -1,6 +1,6 @@
 # Noughts and Crosses
 
-This is a simple noughts and crosses game where the computer places its token randomly. Making it very easy
+This is a simple noughts and crosses game where the computer places its token randomly. Making it very easy. The next step would be to add difficulty levels where the computer selects squares to win
 
 ## Features
 
@@ -13,8 +13,6 @@ A noughts and crosses game
 
 
 + allows cicking while form/modal is open
-
-+ calls winner before inputting token
 
 + says game over - stalemate when board full even if shows a winner
 
@@ -36,6 +34,9 @@ A noughts and crosses game
 + clicking already filled box runs functions and adds aditional computer token - corrected by changing from checking the box is not empty to run functinos to making sure that if the box is not empty do nothing else do the rest of the functions
 
 + failed to call winner; seems to be that when O/computer is winner it only calls after next turn - correct by calling checkPlayerWin function again after computer turn
+
++ calls winner before inputting token - solved by removing alerts
+
 
 ### Validators
 
