@@ -1,4 +1,3 @@
-
 // assign noughts and crosses tokens
 
 let tokenSubmit = document.getElementById('submitButton');
@@ -17,8 +16,8 @@ function assignPT() {
     let gridBoxes = document.getElementsByClassName("grid-boxes");
 
     for (let i = 0; i < 9; i++) {
-        gridBoxes[i].style.pointerEvents  = "all";
-        }
+        gridBoxes[i].style.pointerEvents = "all";
+    }
 }
 
 
@@ -52,44 +51,50 @@ let empty = document.querySelectorAll('.grid-boxes:empty');
 function caseWin1() {
     if ((box1.innerHTML != '') &&
         (
-        (box1.innerHTML === box2.innerHTML && box1.innerHTML === box3.innerHTML) ||
-        (box1.innerHTML === box5.innerHTML && box1.innerHTML === box9.innerHTML) ||
-        (box1.innerHTML === box4.innerHTML && box1.innerHTML === box7.innerHTML)
+            (box1.innerHTML === box2.innerHTML && box1.innerHTML === box3.innerHTML) ||
+            (box1.innerHTML === box5.innerHTML && box1.innerHTML === box9.innerHTML) ||
+            (box1.innerHTML === box4.innerHTML && box1.innerHTML === box7.innerHTML)
         )
-    ) document.getElementById('game-message').innerHTML = `${box1.innerHTML} is the winner. Refresh the page`;
-    let gridBoxes = document.getElementsByClassName("grid-boxes");
+    ) {
+        document.getElementById('game-message').innerHTML = `${box1.innerHTML} is the winner. Refresh the page`;
+        let gridBoxes = document.getElementsByClassName("grid-boxes");
 
-    for (let i = 0; i < 9; i++) {
-        gridBoxes[i].style.pointerEvents  = "none";
+        for (let i = 0; i < 9; i++) {
+            gridBoxes[i].style.pointerEvents = "none";
         }
+    }
 }
 
 function caseWin5() {
     if ((box5.innerHTML != '') &&
-    (
-        (box5.innerHTML === box3.innerHTML && box5.innerHTML === box7.innerHTML) ||
-        (box5.innerHTML === box4.innerHTML && box5.innerHTML === box6.innerHTML)
-    )
-    ) document.getElementById('game-message').innerHTML = `${box5.innerHTML} is the winner. Refresh the page`;
-    let gridBoxes = document.getElementsByClassName("grid-boxes");
+        (
+            (box5.innerHTML === box3.innerHTML && box5.innerHTML === box7.innerHTML) ||
+            (box5.innerHTML === box4.innerHTML && box5.innerHTML === box6.innerHTML)
+        )
+    ) {
+        document.getElementById('game-message').innerHTML = `${box5.innerHTML} is the winner. Refresh the page`;
+        let gridBoxes = document.getElementsByClassName("grid-boxes");
 
-    for (let i = 0; i < 9; i++) {
-        gridBoxes[i].style.pointerEvents  = "none";
+        for (let i = 0; i < 9; i++) {
+            gridBoxes[i].style.pointerEvents = "none";
         }
+    }
 }
 
 function caseWin9() {
     if ((box9.innerHTML != '') &&
-    (
-        (box9.innerHTML === box8.innerHTML && box9.innerHTML === box7.innerHTML) ||
-        (box9.innerHTML === box6.innerHTML && box9.innerHTML === box3.innerHTML)
-    )
-    ) document.getElementById('game-message').innerHTML = `${box9.innerHTML} is the winner. Refresh the page`;
-    let gridBoxes = document.getElementsByClassName("grid-boxes");
+        (
+            (box9.innerHTML === box8.innerHTML && box9.innerHTML === box7.innerHTML) ||
+            (box9.innerHTML === box6.innerHTML && box9.innerHTML === box3.innerHTML)
+        )
+    ) {
+        document.getElementById('game-message').innerHTML = `${box9.innerHTML} is the winner. Refresh the page`;
+        let gridBoxes = document.getElementsByClassName("grid-boxes");
 
-    for (let i = 0; i < 9; i++) {
-        gridBoxes[i].style.pointerEvents  = "none";
+        for (let i = 0; i < 9; i++) {
+            gridBoxes[i].style.pointerEvents = "none";
         }
+    }
 }
 
 function checkPlayerWin() {
@@ -114,23 +119,36 @@ function clearGrid() {
     let gridBoxes = document.getElementsByClassName("grid-boxes");
 
     for (let i = 0; i < 9; i++) {
-        gridBoxes[i].innerHTML  = '';
-        }
+        gridBoxes[i].innerHTML = '';
+    }
 }
 
 function handleClick(event) {
     // inputs playerToken if clicked box is not empty
     if (event.target.innerHTML != '') {
-        
-        }
-    else {
+
+    } else {
         event.target.innerHTML = playerToken;
         empty = document.querySelectorAll('.grid-boxes:empty');
         checkPlayerWin();
-        compTurn();
+        if (document.getElementById('game-message').innerHTML == '') {
+            compTurn();
+        }
         if (empty.length === 0) {
             document.getElementById('game-message').innerHTML = 'Game Over! Stalemate! Refresh the page to try again!';
         }
         checkPlayerWin();
     }
 }
+
+function resetBoard() {
+    let gridBoxes = document.getElementsByClassName("grid-boxes");
+
+    for (let i = 0; i < 9; i++) {
+        gridBoxes[i].innerHTML = '';
+        gridBoxes[i].style.pointerEvents = "all";
+    }
+}
+
+let newGame = document.getElementById('new-game')
+newGame.addEventListener('click', resetBoard)

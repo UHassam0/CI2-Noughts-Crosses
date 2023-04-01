@@ -21,10 +21,10 @@ body {
 .game-center {
     margin: auto;
     height: 640px;
-    width: 640px;    
+    width: 640px;
 }
 
-.game-center > p {
+.game-center>p {
     font-size: larger;
 }
 
@@ -32,7 +32,7 @@ body {
     display: inline-block;
     display: grid;
     grid-template-columns: 200px 200px 200px;
-    grid-template-rows: 200px 200px 200px; 
+    grid-template-rows: 200px 200px 200px;
     gap: 20px;
     margin: auto;
 }
@@ -64,61 +64,67 @@ body {
     background-color: gold;
 }
 
+button {
+    color: teal;
+    font-size: 90%;
+    font-weight: bold;
+    background-color: gold;
+}
 
 
 @media screen and (max-width: 680px) {
     .game-center {
         margin: auto;
         height: 600px;
-        width: 95%;    
+        width: 95%;
     }
-    
+
     .game-grid {
         display: inline-block;
         display: grid;
         grid-template-columns: 150px 150px 150px;
-        grid-template-rows: 150px 150px 150px; 
+        grid-template-rows: 150px 150px 150px;
         gap: 10px;
-    
+
         margin: auto;
     }
-    
+
     .grid-boxes {
         line-height: 150px;
         text-align: center;
         font-size: 130px;
         font-weight: 600;
         background-color: turquoise;
-    
+
     }
-    
+
 }
 
 @media screen and (max-width: 500px) {
     .game-center {
         margin: auto;
         height: 450px;
-        width: 95%;    
+        width: 95%;
     }
-    
+
     .game-grid {
         display: inline-block;
         display: grid;
         grid-template-columns: 100px 100px 100px;
-        grid-template-rows: 100px 100px 100px; 
+        grid-template-rows: 100px 100px 100px;
         gap: 5px;
         margin: auto;
     }
-    
+
     .grid-boxes {
         line-height: 100px;
         text-align: center;
         font-size: 90px;
         font-weight: 400;
         background-color: turquoise;
-    
+
     }
-    
+
 
     h1 {
         font-size: 30px;
