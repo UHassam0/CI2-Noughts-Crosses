@@ -1,7 +1,21 @@
 
 // assign noughts and crosses tokens
-let compToken = 'O';
-let playerToken = 'X';
+
+let tokenSubmit = document.getElementById('submitButton');
+tokenSubmit.addEventListener('click', assignPT);
+
+function assignPT() {
+    let form = document.forms.tokenForm;
+    playerToken = form.querySelector('input[name=token]:checked').value;
+    if (playerToken == 'O') {
+        compToken = 'X';
+    } else {
+        compToken = 'O';
+    }
+    document.getElementsByClassName("grid-boxes").style.pointerEvents = "all";
+}
+
+
 
 // Assign game grid boxes to variables
 let box1 = document.getElementById('1');

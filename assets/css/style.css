@@ -24,6 +24,10 @@ body {
     width: 640px;    
 }
 
+.game-center > p {
+    font-size: larger;
+}
+
 .game-grid {
     display: inline-block;
     display: grid;
@@ -40,15 +44,7 @@ body {
     font-weight: 600;
     background-color: turquoise;
     cursor: pointer;
-}
-
-.doNotUse {
-    line-height: 200px;
-    text-align: center;
-    font-size: 180px;
-    font-weight: 600;
-    background-color: turquoise;
-
+    pointer-events: none;
 }
 
 .left {
@@ -61,7 +57,7 @@ body {
 
 }
 
-#submit {
+#submitButton {
     color: teal;
     font-size: 90%;
     font-weight: bold;
@@ -96,14 +92,6 @@ body {
     
     }
     
-    .doNotUse {
-        line-height: 150px;
-        text-align: center;
-        font-size: 130px;
-        font-weight: 600;
-        background-color: turquoise;
-    
-    }
 }
 
 @media screen and (max-width: 500px) {
@@ -119,7 +107,6 @@ body {
         grid-template-columns: 100px 100px 100px;
         grid-template-rows: 100px 100px 100px; 
         gap: 5px;
-    
         margin: auto;
     }
     
@@ -132,13 +119,6 @@ body {
     
     }
     
-    .doNotUse {
-        line-height: 100px;
-        text-align: center;
-        font-size: 90px;
-        font-weight: 400;
-        background-color: turquoise;
-    }
 
     h1 {
         font-size: 30px;
