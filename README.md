@@ -15,7 +15,7 @@ A noughts and crosses game. It has the option to select token, that is, whether 
 ### Bugs
 
 
-+ says game over - stalemate when board full even if shows a winner
+
 
 
 + I've had to define empty too many times - potential for global variable definiton but want to avoid the risks of that
@@ -39,6 +39,7 @@ A noughts and crosses game. It has the option to select token, that is, whether 
 
 + not centre aligned on media queries? and font contrast
 
++ says game over - stalemate when board full even if shows a winner - disappeared with other changes
 
 ### Validators
 

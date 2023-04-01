@@ -57,6 +57,11 @@ function caseWin1() {
         (box1.innerHTML === box4.innerHTML && box1.innerHTML === box7.innerHTML)
         )
     ) document.getElementById('game-message').innerHTML = `${box1.innerHTML} is the winner. Refresh the page`;
+    let gridBoxes = document.getElementsByClassName("grid-boxes");
+
+    for (let i = 0; i < 9; i++) {
+        gridBoxes[i].style.pointerEvents  = "none";
+        }
 }
 
 function caseWin5() {
@@ -66,6 +71,11 @@ function caseWin5() {
         (box5.innerHTML === box4.innerHTML && box5.innerHTML === box6.innerHTML)
     )
     ) document.getElementById('game-message').innerHTML = `${box5.innerHTML} is the winner. Refresh the page`;
+    let gridBoxes = document.getElementsByClassName("grid-boxes");
+
+    for (let i = 0; i < 9; i++) {
+        gridBoxes[i].style.pointerEvents  = "none";
+        }
 }
 
 function caseWin9() {
@@ -75,6 +85,11 @@ function caseWin9() {
         (box9.innerHTML === box6.innerHTML && box9.innerHTML === box3.innerHTML)
     )
     ) document.getElementById('game-message').innerHTML = `${box9.innerHTML} is the winner. Refresh the page`;
+    let gridBoxes = document.getElementsByClassName("grid-boxes");
+
+    for (let i = 0; i < 9; i++) {
+        gridBoxes[i].style.pointerEvents  = "none";
+        }
 }
 
 function checkPlayerWin() {
@@ -93,6 +108,14 @@ function compTurn() {
     if (empty.length > 0) {
         empty[compChoice].innerHTML = compToken; // input compToken to random choice as long as at least 1 empty box
     }
+}
+
+function clearGrid() {
+    let gridBoxes = document.getElementsByClassName("grid-boxes");
+
+    for (let i = 0; i < 9; i++) {
+        gridBoxes[i].innerHTML  = '';
+        }
 }
 
 function handleClick(event) {
