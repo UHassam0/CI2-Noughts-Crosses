@@ -1,6 +1,6 @@
 h1 {
     text-align: center;
-    color: gold;
+    color: navy;
     font-size: 50px;
 }
 
@@ -13,8 +13,8 @@ h1 {
 }
 
 body {
-    background-color: teal;
-    color: gold;
+    background-color: rgba(200, 233, 233, 0.575);
+    color: black;
     font-family: Alkatra;
 }
 
@@ -58,17 +58,17 @@ body {
 }
 
 #submitButton {
-    color: teal;
+    color: black;
     font-size: 90%;
     font-weight: bold;
-    background-color: gold;
+    background-color: white;
 }
 
 button {
-    color: teal;
+    color: black;
     font-size: 90%;
     font-weight: bold;
-    background-color: gold;
+    background-color: white;
 }
 
 
