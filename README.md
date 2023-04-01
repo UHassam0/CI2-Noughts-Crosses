@@ -12,7 +12,7 @@ A noughts and crosses game
 
 
 
-+ allows cicking while form/modal is open
+
 
 + says game over - stalemate when board full even if shows a winner
 
@@ -36,6 +36,8 @@ A noughts and crosses game
 + failed to call winner; seems to be that when O/computer is winner it only calls after next turn - correct by calling checkPlayerWin function again after computer turn
 
 + calls winner before inputting token - solved by removing alerts
+
++ allows cicking while form/modal is open - change CSS to 'pointer-events: none' for gridboxes then use JS to change the pointer-evetns to all on each of the grid-boxes
 
 
 ### Validators

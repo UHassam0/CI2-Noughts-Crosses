@@ -12,7 +12,13 @@ function assignPT() {
     } else {
         compToken = 'O';
     }
-    document.getElementsByClassName("grid-boxes").style.pointerEvents = "all";
+
+
+    let gridBoxes = document.getElementsByClassName("grid-boxes");
+
+    for (let i = 0; i < 9; i++) {
+        gridBoxes[i].style.pointerEvents  = "all";
+        }
 }
 
 
