@@ -15,10 +15,13 @@ A noughts and crosses game. It has the option to select token, that is, whether 
 ### Bugs
 
 
-
-
-
 + I've had to define empty too many times - potential for global variable definiton but want to avoid the risks of that
+
+
++ Not refreshing the Game winner message on New Game - also consider saying whether winner is player or 'PC'
++ Doesn't restart game to choose token again
++ Once New Game called no longer calles PC turn
+    - This was resolved by clearing the game message as the presence of the game message prevents turns
 
 
 ### Solved Bugs

@@ -143,7 +143,11 @@ function resetBoard() {
         gridBoxes[i].innerHTML = '';
         gridBoxes[i].style.pointerEvents = "all";
     }
+
+    document.getElementById('game-message').innerHTML = '';
+
 }
 
 let newGame = document.getElementById('new-game');
 newGame.addEventListener('click', resetBoard);
+
