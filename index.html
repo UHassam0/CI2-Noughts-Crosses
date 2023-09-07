@@ -1,24 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Noughts & Crosses</title>
-    <link rel="stylesheet" href="assets\css\style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alkatra&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <header>
         <h1>Noughts & Crosses</h1>
+        <!-- Page heading -->
     </header>
 
+
+
     <div class="game-center">
+        <!-- Container div for game and divs -->
+
 
         <div class="game-title">
-            <h2>You are Crosses!</h2>
-        </div>
 
-        <div class="game-grid">
+        </div>
+        <dialog class="game-selections" id="modal" open>
+            <!-- Initial dialog box for info and selecting X or O - also take name and keep score? -->
+            <form class="left" method="dialog" id="tokenForm">
+                <h2>Which do you choose?</h2>
+                <label>Noughts or Crosses?</label>
+                <input type="radio" value="X" name="token" aria-label="X" required>X
+                <input type="radio" value="O" name="token" aria-label="O">O
+                <input type="submit" id="submitButton">
+            </form>
+
+        </dialog>
+        <div class="game-grid" id="boxes">
+            <!-- IDs for grid boxes going left to right each line and top to bottom from one line to the next -->
             <div class="grid-boxes" id="1"></div>
             <div class="grid-boxes" id="2"></div>
             <div class="grid-boxes" id="3"></div>
@@ -30,19 +51,13 @@
             <div class="grid-boxes" id="9"></div>
         </div>
 
-        <dialog class="game-selections" id="modal">
-            <form class="left" method="dialog" id="form">
-            <h4>Which do you choose?</h4>
-            <label>Noughts or Crosses?</label>
-            <input type="radio" value="X" name="token" required>X</input>
-            <input type="radio" value="O" name="token">O</input>
-            <input type="submit" id="submit">
-            </form>
+        <p id="game-message"></p>
+        <button id="new-game" aria-label="new-game">New Game</button>
 
-        </dialog>
 
     </div>
 
     <script src="assets/js/script.js"></script>
 </body>
+
 </html>
