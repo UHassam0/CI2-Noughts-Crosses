@@ -12,7 +12,7 @@ function assignPT() {
         compToken = 'O';
     }
 
-
+    // allows boxes to be clicked
     let gridBoxes = document.getElementsByClassName("grid-boxes");
 
     for (let i = 0; i < 9; i++) {
@@ -69,7 +69,8 @@ function caseWin5() {
     if ((box5.innerHTML != '') &&
         (
             (box5.innerHTML === box3.innerHTML && box5.innerHTML === box7.innerHTML) ||
-            (box5.innerHTML === box4.innerHTML && box5.innerHTML === box6.innerHTML)
+            (box5.innerHTML === box4.innerHTML && box5.innerHTML === box6.innerHTML) ||
+            (box5.innerHTML === box2.innerHTML && box5.innerHTML === box8.innerHTML)
         )
     ) {
         document.getElementById('game-message').innerHTML = `${box5.innerHTML} is the winner. Refresh the page`;
@@ -100,7 +101,8 @@ function caseWin9() {
 function checkPlayerWin() {
     //checks for each win case
     if (empty.length < 5) { 
-// trying to prevent return of blank winner
+// trying to prevent return of blank winner - may no longer be necessary But there is no way
+// for there to be a winner until at least 5 moves have been played 
         caseWin1();
         caseWin5();
         caseWin9();
@@ -135,6 +137,8 @@ function handleClick(event) {
         checkPlayerWin();
     }
 }
+
+// resets game board - also do i need to /should i add function to select token again??
 
 function resetBoard() {
     let gridBoxes = document.getElementsByClassName("grid-boxes");
