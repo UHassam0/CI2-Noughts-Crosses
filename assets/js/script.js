@@ -4,6 +4,8 @@ var winner;
 var playerToken;
 var compToken;
 
+document.getElementById('modal').showModal();
+
 let tokenSubmit = document.getElementById('submitButton');
 tokenSubmit.addEventListener('click', assignPT);
 
@@ -22,6 +24,8 @@ function assignPT() {
     for (let i = 0; i < 9; i++) {
         gridBoxes[i].style.pointerEvents = "all";
     }
+
+    document.getElementById('token-selected').innerHTML = `You have chosen to play as ${playerToken}`
 }
 
 
@@ -65,7 +69,7 @@ function caseWin1() {
         } else {
             winner = 'You are';
         }
-        document.getElementById('game-message').innerHTML = `${winner} the winner. Refresh the page`;
+        document.getElementById('game-message').innerHTML = `${winner} the winner. Select New Game below!`;
         let gridBoxes = document.getElementsByClassName("grid-boxes");
 
         for (let i = 0; i < 9; i++) {
@@ -87,7 +91,7 @@ function caseWin5() {
         } else {
             winner = 'You are';
         }
-        document.getElementById('game-message').innerHTML = `${winner} the winner. Refresh the page`;
+        document.getElementById('game-message').innerHTML = `${winner} the winner. Select New Game below!`;
         let gridBoxes = document.getElementsByClassName("grid-boxes");
 
         for (let i = 0; i < 9; i++) {
@@ -108,7 +112,7 @@ function caseWin9() {
         } else {
             winner = 'You are';
         }
-        document.getElementById('game-message').innerHTML = `${winner} the winner. Refresh the page`;
+        document.getElementById('game-message').innerHTML = `${winner} the winner. Select New Game below!`;
         let gridBoxes = document.getElementsByClassName("grid-boxes");
 
         for (let i = 0; i < 9; i++) {
@@ -151,7 +155,7 @@ function handleClick(event) {
             compTurn();
         }
         if (empty.length === 0) {
-            document.getElementById('game-message').innerHTML = 'Game Over! Stalemate! Refresh the page to try again!';
+            document.getElementById('game-message').innerHTML = 'Game Over! Stalemate! Select New Game below!';
         }
         checkPlayerWin();
     }
@@ -164,10 +168,11 @@ function resetBoard() {
 
     for (let i = 0; i < 9; i++) {
         gridBoxes[i].innerHTML = '';
-        gridBoxes[i].style.pointerEvents = "all";
+        // gridBoxes[i].style.pointerEvents = "all";
     }
 
     document.getElementById('game-message').innerHTML = '';
+    document.getElementById('modal').showModal();
 
 }
 

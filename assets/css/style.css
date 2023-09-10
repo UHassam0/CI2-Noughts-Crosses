@@ -2,6 +2,7 @@ h1 {
     text-align: center;
     color: navy;
     font-size: 50px;
+    margin: 10px;
 }
 
 #modal::backdrop {
@@ -26,21 +27,22 @@ body {
 
 .game-center>p {
     font-size: larger;
+    margin: 2px;
 }
 
 .game-grid {
     display: inline-block;
     display: grid;
-    grid-template-columns: 200px 200px 200px;
-    grid-template-rows: 200px 200px 200px;
+    grid-template-columns: 180px 180px 180px;
+    grid-template-rows: 180px 180px 180px;
     gap: 20px;
     margin: auto;
 }
 
 .grid-boxes {
-    line-height: 200px;
+    line-height: 180px;
     text-align: center;
-    font-size: 180px;
+    font-size: 160px;
     font-weight: 600;
     background-color: turquoise;
     cursor: pointer;
