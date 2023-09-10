@@ -1,8 +1,8 @@
 // assign noughts and crosses tokens
 
-var winner;
-var playerToken;
-var compToken;
+let winner;
+let playerToken;
+let compToken;
 
 document.getElementById('modal').showModal();
 
@@ -25,7 +25,7 @@ function assignPT() {
         gridBoxes[i].style.pointerEvents = "all";
     }
 
-    document.getElementById('token-selected').innerHTML = `You have chosen to play as ${playerToken}`
+    document.getElementById('token-selected').innerHTML = `You have chosen to play as ${playerToken}`;
 }
 
 

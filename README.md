@@ -1,32 +1,33 @@
 # Noughts and Crosses
 
-This is a simple noughts and crosses game where the computer places its token randomly. Making it very easy. The next step would be to add difficulty levels where the computer selects squares to win
+This is a simple noughts and crosses game where the computer places its token randomly. Making it very easy. The next step would be to add difficulty levels where the computer selects squares to win based on some logic rather than random selection
 
 ## Features
 
 A noughts and crosses game. It has the option to select token, that is, whether to play as noughts or crosses. I use javascript to run the game and check for wins
 
++ Ability to choose token used and start game
+
+![token choice image](./assets/images/choose-token.png)
+
++ Main game play where player clicks lead to otoken input and pc auto input
+
+![game play](./assets/images/game-play.png)
+
++ Winner or stalemate declared and option for new game available
+
+![game end](./assets/images/game-end.png)
+
+### Wireframes
+
 ![handrawn wireframe](./assets/images/noughts-crosses-wireframe.jpeg)
-![neater wireframe](./assets/images/Noughts%20and%20Crosses%20Wireframe.jpeg)
-![flowhcart for logic of game](./assets/images/Noughts%20and%20crosses%20flowchart.jpeg)
+![neater wireframe](./assets/images/noughts-and-crosses-wireframe.jpeg)
+![flowhcart for logic of game](./assets/images/noughts-and-crosses-flowchart.jpeg)
+
 
 ## Testing and validation
 
 ### Bugs
-
-+ I've had to define empty too many times - potential for global variable definiton but want to avoid the risks of that
-
-+ favicon
-
-+ Not refreshing the Game winner message on New Game - also consider saying whether winner is player or 'PC'
-+ Doesn't restart game to choose token again
-+ Once New Game called no longer calles PC turn
-    - This was resolved by clearing the game message as the presence of the game message prevents turns
-
-
-+ doesn't recognise middle vertical line as a win
-    - added additional line to caseWin5 to cover this
-
 
 ### Solved Bugs
 
@@ -48,17 +49,32 @@ A noughts and crosses game. It has the option to select token, that is, whether 
 
 + says game over - stalemate when board full even if shows a winner - disappeared with other changes
 
++ Not refreshing the Game winner message on New Game - also consider saying whether winner is player or 'PC'
+    - added to new game function
+
++ Doesn't restart game to choose token again
+    - added showModal function to new game function
+
++ Once New Game called no longer calles PC turn
+    - This was resolved by clearing the game message as the presence of the game message prevents turns
+
+
++ doesn't recognise middle vertical line as a win
+    - added additional line to caseWin5 to cover this
+
 ### Validators
 
-![html validator](./assets/images/w3c%20html%20report.png)
+Passed code through the W3C validators for HTML and CSS and JSHint for the JavaScript, and ensured all code passed
 
-![css validator](./assets/images/jigsaw%20report.png)
+![html validator](./assets/images/w3c-html-report.png)
 
-![lighthouse results](./assets/images/lighthouse%20report.png)
+![css validator](./assets/images/jigsaw-report.png)
 
-![javascript validator](./assets/images/JSHint%20report.png)
+![lighthouse results](./assets/images/lighthouse-report.png)
 
-### Deployment
+![javascript validator](./assets/images/jshint-report.png)
+
+## Deployment
 
 I have deployed the site to GitHub Pages:
 
@@ -69,3 +85,11 @@ I have deployed the site to GitHub Pages:
 1. After a short while you should see the box at the top of the page indicating success and the live site address
 
 My live site is at: https://uhassam0.github.io/CI2-Noughts-Crosses/
+
+## Credits
+
+Some inspiration for the CSS came from [Kevin Powell's](https://www.youtube.com/@KevinPowell) YouTube channel. In particular the use of a modal
+
+I used general results from google for general troubleshooting and syntax reminders. Special mention to Mozilla Docs and W3School
+
+Favicon from [Pixabay](https://pixabay.com/vectors/controller-pad-video-game-1294077/)
