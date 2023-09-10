@@ -102,7 +102,7 @@ button {
 
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 500px) { 
     .game-center {
         margin: auto;
         height: 450px;

@@ -2,6 +2,8 @@
 
 This is a simple noughts and crosses game where the computer places its token randomly. Making it very easy. The next step would be to add difficulty levels where the computer selects squares to win based on some logic rather than random selection
 
+![mockups](./assets/images/noughts-crosses-mockup.png)
+
 ## Features
 
 A noughts and crosses game. It has the option to select token, that is, whether to play as noughts or crosses. I use javascript to run the game and check for wins
