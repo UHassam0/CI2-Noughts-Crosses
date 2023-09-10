@@ -1,5 +1,9 @@
 // assign noughts and crosses tokens
 
+var winner;
+var playerToken;
+var compToken;
+
 let tokenSubmit = document.getElementById('submitButton');
 tokenSubmit.addEventListener('click', assignPT);
 
@@ -56,7 +60,12 @@ function caseWin1() {
             (box1.innerHTML === box4.innerHTML && box1.innerHTML === box7.innerHTML)
         )
     ) {
-        document.getElementById('game-message').innerHTML = `${box1.innerHTML} is the winner. Refresh the page`;
+        if (box1.innerHTML == compToken) {
+            winner = 'Computer is';
+        } else {
+            winner = 'You are';
+        }
+        document.getElementById('game-message').innerHTML = `${winner} the winner. Refresh the page`;
         let gridBoxes = document.getElementsByClassName("grid-boxes");
 
         for (let i = 0; i < 9; i++) {
@@ -73,7 +82,12 @@ function caseWin5() {
             (box5.innerHTML === box2.innerHTML && box5.innerHTML === box8.innerHTML)
         )
     ) {
-        document.getElementById('game-message').innerHTML = `${box5.innerHTML} is the winner. Refresh the page`;
+        if (box5.innerHTML == compToken) {
+            winner = 'Computer is';
+        } else {
+            winner = 'You are';
+        }
+        document.getElementById('game-message').innerHTML = `${winner} the winner. Refresh the page`;
         let gridBoxes = document.getElementsByClassName("grid-boxes");
 
         for (let i = 0; i < 9; i++) {
@@ -89,7 +103,12 @@ function caseWin9() {
             (box9.innerHTML === box6.innerHTML && box9.innerHTML === box3.innerHTML)
         )
     ) {
-        document.getElementById('game-message').innerHTML = `${box9.innerHTML} is the winner. Refresh the page`;
+        if (box9.innerHTML == compToken) {
+            winner = 'Computer is';
+        } else {
+            winner = 'You are';
+        }
+        document.getElementById('game-message').innerHTML = `${winner} the winner. Refresh the page`;
         let gridBoxes = document.getElementsByClassName("grid-boxes");
 
         for (let i = 0; i < 9; i++) {
