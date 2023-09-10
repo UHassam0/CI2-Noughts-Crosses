@@ -14,7 +14,6 @@ A noughts and crosses game. It has the option to select token, that is, whether 
 
 ### Bugs
 
-
 + I've had to define empty too many times - potential for global variable definiton but want to avoid the risks of that
 
 + favicon
@@ -58,3 +57,15 @@ A noughts and crosses game. It has the option to select token, that is, whether 
 ![lighthouse results](./assets/images/lighthouse%20report.png)
 
 ![javascript validator](./assets/images/JSHint%20report.png)
+
+### Deployment
+
+I have deployed the site to GitHub Pages:
+
+1. Navigate to the settings tab of the repository
+1. Navigate to the Pages section of settings using the headings on the left
+1. Ensure 'Deploy from a branch' is selected under source
+1. Select the 'main' branch under branch
+1. After a short while you should see the box at the top of the page indicating success and the live site address
+
+My live site is at: https://uhassam0.github.io/CI2-Noughts-Crosses/
