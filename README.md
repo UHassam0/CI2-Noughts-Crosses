@@ -8,13 +8,13 @@ Live site: https://uhassam0.github.io/CI2-Noughts-Crosses/
 
 ## Features
 
-A noughts and crosses game. It has the option for the user to select their token, that is, whether to play as noughts or crosses. I use javascript to run the game and check for wins
+A noughts and crosses game. It has the option for the user to select their token, that is, whether to play as noughts or crosses. I use JavaScript to run the game and check for wins
 
 + Ability to choose token used and start game
 
 ![token choice image](./assets/images/choose-token.png)
 
-+ Main game play where player clicks lead to otoken input and pc auto input
++ Main game play where player clicks lead to token input and pc auto input
 
 ![game play](./assets/images/game-play.png)
 
@@ -38,19 +38,19 @@ There are some instances where Chrome Dev tools show a horizontal scroll on smal
 
 ### Solved Bugs
 
-+ Incorrect win definitions - corrected win definitions - using brackets and corrected one reference to the wrong box. The ands needed containig in brackets as they were mixing with the ors for the different possibilities
++ Incorrect win definitions - corrected win definitions - using brackets and corrected one reference to the wrong box. The ANDs needed containing in brackets as they were mixing with the ORs for the different possibilities
 
 + relies on user to reset board - created reload function - currently only called when game reaches stalemate - will adjust to be called with button. remove for now
 
 + checks for winner and can call winner for blank spaces - corrected by adding clause to win checks to ensure the box is not empty and there is a win
 
-+ clicking already filled box runs functions and adds aditional computer token - corrected by changing from checking the box is not empty to run functinos to making sure that if the box is not empty do nothing else do the rest of the functions
++ clicking already filled box runs functions and adds additional computer token - corrected by changing from checking the box is not empty to run functions to making sure that if the box is not empty do nothing else do the rest of the functions
 
 + failed to call winner; seems to be that when O/computer is winner it only calls after next turn - correct by calling checkPlayerWin function again after computer turn
 
 + calls winner before inputting token - solved by removing alerts
 
-+ allows cicking while form/modal is open - change CSS to 'pointer-events: none' for gridboxes then use JS to change the pointer-evetns to all on each of the grid-boxes
++ allows clicking while form/modal is open - change CSS to 'pointer-events: none' for gridboxes then use JS to change the pointer-events to all on each of the grid-boxes
 
 + not centre aligned on media queries? and font contrast
 
@@ -62,7 +62,7 @@ There are some instances where Chrome Dev tools show a horizontal scroll on smal
 + Doesn't restart game to choose token again
     - added showModal function to new game function
 
-+ Once New Game called no longer calles PC turn
++ Once New Game called no longer called PC turn
     - This was resolved by clearing the game message as the presence of the game message prevents turns
 
 
