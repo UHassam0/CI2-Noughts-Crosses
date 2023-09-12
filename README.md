@@ -1,12 +1,14 @@
 # Noughts and Crosses
 
-This is a simple noughts and crosses game where the computer places its token randomly. Making it very easy. The next step would be to add difficulty levels where the computer selects squares to win based on some logic rather than random selection
+This is a simple noughts and crosses game where the computer places its token randomly. This makes it very easy. A possible next step could be to add difficulty levels where the computer selects squares to win based on some logic rather than random selection
+
+Live site: https://uhassam0.github.io/CI2-Noughts-Crosses/
 
 ![mockups](./assets/images/noughts-crosses-mockup.png)
 
 ## Features
 
-A noughts and crosses game. It has the option to select token, that is, whether to play as noughts or crosses. I use javascript to run the game and check for wins
+A noughts and crosses game. It has the option for the user to select their token, that is, whether to play as noughts or crosses. I use javascript to run the game and check for wins
 
 + Ability to choose token used and start game
 
@@ -22,12 +24,15 @@ A noughts and crosses game. It has the option to select token, that is, whether 
 
 ### Wireframes
 
+This was a rough wireframe I drew to show how I intended the game to look
 ![handrawn wireframe](./assets/images/noughts-crosses-wireframe.jpeg)
-![neater wireframe](./assets/images/noughts-and-crosses-wireframe.jpeg)
+
+I thought through and drew the logic in a flowchart using LucidChart
 ![flowhcart for logic of game](./assets/images/noughts-and-crosses-flowchart.jpeg)
 
-
 ## Testing and validation
+
+There are some instances where Chrome Dev tools show a horizontal scroll on small screen sizes. However, this was difficult to replicate and did not happen on my phone which is a relatively smaller screen
 
 ### Bugs
 
@@ -76,9 +81,13 @@ Passed code through the W3C validators for HTML and CSS and JSHint for the JavaS
 
 ![javascript validator](./assets/images/jshint-report.png)
 
-## Deployment
+## Cloning, Forking and Deployment
 
-I have deployed the site to GitHub Pages:
+This repository can be cloned by clicking the green 'code' button at the top which gives you the code to copy to clone using the GitHub CLI in your own IDE
+
+You can fork this repository easily by clicking the fork button at the top of the page (above and to the code button)
+
+Deployment to GitHub Pages:
 
 1. Navigate to the settings tab of the repository
 1. Navigate to the Pages section of settings using the headings on the left

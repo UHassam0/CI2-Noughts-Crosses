@@ -73,7 +73,7 @@ button {
     background-color: white;
 }
 
-
+/* medium sized screens */
 @media screen and (max-width: 680px) {
     .game-center {
         margin: auto;
@@ -102,6 +102,7 @@ button {
 
 }
 
+/* small screens */
 @media screen and (max-width: 500px) { 
     .game-center {
         margin: auto;
@@ -126,7 +127,6 @@ button {
         background-color: turquoise;
 
     }
-
 
     h1 {
         font-size: 30px;

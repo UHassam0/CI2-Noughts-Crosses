@@ -6,11 +6,11 @@ let compToken;
 
 document.getElementById('modal').showModal();
 
-let tokenSubmit = document.getElementById('submitButton');
+const tokenSubmit = document.getElementById('submitButton');
 tokenSubmit.addEventListener('click', assignPT);
 
 function assignPT() {
-    let form = document.forms.tokenForm;
+    const form = document.forms.tokenForm;
     playerToken = form.querySelector('input[name=token]:checked').value;
     if (playerToken == 'O') {
         compToken = 'X';
@@ -19,7 +19,7 @@ function assignPT() {
     }
 
     // allows boxes to be clicked
-    let gridBoxes = document.getElementsByClassName("grid-boxes");
+    const gridBoxes = document.getElementsByClassName("grid-boxes");
 
     for (let i = 0; i < 9; i++) {
         gridBoxes[i].style.pointerEvents = "all";
@@ -28,18 +28,16 @@ function assignPT() {
     document.getElementById('token-selected').innerHTML = `You have chosen to play as ${playerToken}`;
 }
 
-
-
 // Assign game grid boxes to variables
-let box1 = document.getElementById('1');
-let box2 = document.getElementById('2');
-let box3 = document.getElementById('3');
-let box4 = document.getElementById('4');
-let box5 = document.getElementById('5');
-let box6 = document.getElementById('6');
-let box7 = document.getElementById('7');
-let box8 = document.getElementById('8');
-let box9 = document.getElementById('9');
+const box1 = document.getElementById('1');
+const box2 = document.getElementById('2');
+const box3 = document.getElementById('3');
+const box4 = document.getElementById('4');
+const box5 = document.getElementById('5');
+const box6 = document.getElementById('6');
+const box7 = document.getElementById('7');
+const box8 = document.getElementById('8');
+const box9 = document.getElementById('9');
 
 // Add event listeners to game grid boxes
 box1.addEventListener('click', handleClick);
@@ -51,8 +49,6 @@ box6.addEventListener('click', handleClick);
 box7.addEventListener('click', handleClick);
 box8.addEventListener('click', handleClick);
 box9.addEventListener('click', handleClick);
-
-
 
 let empty = document.querySelectorAll('.grid-boxes:empty');
 
@@ -123,25 +119,23 @@ function caseWin9() {
 
 function checkPlayerWin() {
     //checks for each win case
-    if (empty.length < 5) { 
-// trying to prevent return of blank winner - may no longer be necessary But there is no way
-// for there to be a winner until at least 5 moves have been played 
+    if (empty.length < 5) {
+        // trying to prevent return of blank winner - may no longer be necessary But there is no way
+        // for there to be a winner until at least 5 moves have been played 
         caseWin1();
         caseWin5();
         caseWin9();
     }
 }
 
-
 function compTurn() {
-    let compChoice = Math.floor(Math.random() * empty.length); 
+    let compChoice = Math.floor(Math.random() * empty.length);
     // generate random number less than or equal to number of empty boxes
     if (empty.length > 0) {
         // input compToken to random choice as long as at least 1 empty box
-         empty[compChoice].innerHTML = compToken;
+        empty[compChoice].innerHTML = compToken;
     }
 }
-
 
 function handleClick(event) {
     // inputs playerToken if clicked box is not empty
